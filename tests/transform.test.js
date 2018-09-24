@@ -1,21 +1,37 @@
-const through = require("through2");
+const mock = require("mock-fs");
+const fs = require("fs");
 
-const toSassString = require("./toSassString");
+const transform = require("../lib/transform");
 
-module.exports = function jsonSass(opts) {
-    const options = Object.assign({
-        prefix: "",
-        suffix: ";"
-    }, opts);
-    
-    return through(function(chunk, enc, callback) {
-        let jsValue;
-        try {
-            jsValue = JSON.parse(chunk);
-            this.push(`${options.prefix}${toSassString(jsValue)}${options.suffix}`);
-            callback();
-        } catch (err) {
-            callback(err);
-        }
+describe("json to sass", () => {
+    beforeEach(() => {
+        mock({
+            "test/theme.json": `{
+                "green-dark": "#29918a",
+                "green-mid": "#42aaa3",
+                "green-light": "#69c5bd",
+                "green-soft": "#69c5bd"
+            }`
+        });
     });
-};
+    
+    afterEach(() => {
+        mock.restore();
+    });
+    
+    test("should transform json to sass", (done) => {
+        let result = "";
+        fs.createReadStream("test/theme.json")
+            .pipe(transform({
+                prefix: "$colors: "
+            }))
+            .on("data", (buf) => {
+                result = `${result}${buf.toString()}`;
+            })
+            .on("end", () => {
+                const expected = "$colors: (\n  green-dark: #29918a,\n  green-mid: #42aaa3,\n  green-light: #69c5bd,\n  green-soft: #69c5bd\n);";
+                expect(result).toEqual(expected);
+                done();
+            });
+    });
+});
