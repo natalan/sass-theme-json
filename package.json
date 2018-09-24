@@ -1,0 +1,61 @@
+{
+  "name": "sass-theme-json",
+  "version": "1.0.0",
+  "description": "Transform JSON into SASS",
+  "main": "index.js",
+  "bin": {
+    "sass-theme-json": "index.js"
+  },
+  "author": {
+    "name": "Andrei Zharov",
+    "email": "belmass@gmail.com",
+    "url": "http://www.o2v.net/"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "scripts": {
+    "lint": "eslint ./ --quiet",
+    "jest": "jest",
+    "test": "npm run lint && npm run jest"
+  },
+  "keywords": [
+    "SASS",
+    "JSON",
+    "theme"
+  ],
+  "dependencies": {
+    "is-plain-object": "2.0.4",
+    "through2": "2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natalan/sass-theme-json.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Andrei Zharov",
+      "email": "belmass@gmail.com",
+      "url": "http://www.o2v.net/"
+    }
+  ],
+  "devDependencies": {
+    "eslint": "5.6.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1",
+    "jest": "23.6.0",
+    "jest-cli": "23.6.0",
+    "mock-fs": "^4.7.0"
+  }
+}
