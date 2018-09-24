@@ -1,8 +1,9 @@
 SASS theme from JSON
 =======
-[![Build Status](https://travis-ci.org/natalan/samsung-remote.svg?branch=master)](https://travis-ci.org/natalan/samsung-remote)
+[![Build Status](https://travis-ci.org/natalan/sass-theme-json.svg?branch=master)](https://travis-ci.org/natalan/sass-theme-json)
 
 Transform JSON into SASS.
+
 We use this at Pazien to share theme colors stored in JSON between JS and SCSS files.
 
 Inspired by [json-sass](https://github.com/indexzero/json-sass) module that is not longer maintained.
