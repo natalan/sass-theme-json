@@ -4,7 +4,7 @@ SASS theme from JSON
 
 Transform JSON into SASS.
 
-We use this at Pazien to share theme colors stored in JSON between JS and SCSS files.
+Use it to share theme colors stored in JSON between JS and SCSS files.
 
 Inspired by [json-sass](https://github.com/indexzero/json-sass) module that is not longer maintained.
 
