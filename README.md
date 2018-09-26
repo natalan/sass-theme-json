@@ -1,6 +1,6 @@
 SASS theme from JSON
 =======
-[![Build Status](https://travis-ci.org/natalan/sass-theme-json.svg?branch=master)](https://travis-ci.org/natalan/sass-theme-json)
+[![Build Status](https://travis-ci.org/natalan/sass-theme-json.svg?branch=master)](https://travis-ci.org/natalan/sass-theme-json) [![Greenkeeper badge](https://badges.greenkeeper.io/natalan/sass-theme-json.svg)](https://greenkeeper.io/)
 
 Transform JSON into SASS.
 
