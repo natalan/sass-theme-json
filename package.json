@@ -30,7 +30,7 @@
   "dependencies": {
     "is-plain-object": "2.0.4",
     "minimist": "1.2.0",
-    "through2": "2.0.3"
+    "through2": "2.0.4"
   },
   "repository": {
     "type": "git",
