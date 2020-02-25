@@ -52,6 +52,6 @@
     "eslint-plugin-react": "7.18.0",
     "jest": "24.9.0",
     "jest-cli": "24.9.0",
-    "mock-fs": "4.10.4"
+    "mock-fs": "4.11.0"
   }
 }
