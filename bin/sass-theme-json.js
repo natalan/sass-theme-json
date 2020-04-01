@@ -4,7 +4,7 @@ const path = require("path");
 const minimist = require("minimist");
 const { Readable } = require("stream");
 
-const transform = require("../");
+const transform = require("../index");
 
 const argv = minimist(process.argv.slice(2), {
     alias: {
