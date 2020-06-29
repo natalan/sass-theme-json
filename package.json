@@ -49,7 +49,7 @@
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-plugin-import": "2.21.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react": "7.20.1",
     "jest": "25.2.4",
     "jest-cli": "25.2.4",
     "mock-fs": "4.11.0"
