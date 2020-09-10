@@ -28,7 +28,7 @@
     "theme"
   ],
   "dependencies": {
-    "is-plain-object": "4.1.1",
+    "is-plain-object": "5.0.0",
     "minimist": "1.2.5",
     "through2": "4.0.2"
   },
