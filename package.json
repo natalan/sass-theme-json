@@ -29,7 +29,7 @@
   ],
   "dependencies": {
     "is-plain-object": "5.0.0",
-    "minimist": "1.2.5",
+    "minimist": "1.2.6",
     "through2": "4.0.2"
   },
   "repository": {
