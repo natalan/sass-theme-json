@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const minimist = require("minimist");
-const { Readable } = require("stream");
+import fs from "fs";
+import path from "path";
+import minimist from "minimist";
+import { Readable } from "stream";
 
-const transform = require("../index");
+import transform from "../index.js";
 
 const argv = minimist(process.argv.slice(2), {
     alias: {
@@ -21,10 +21,10 @@ if (argv.infile === "-") {
     input = process.stdin;
 } else if (path.extname(argv.infile) === ".js") {
     input = new Readable();
-        
-    const file = require(path.join(process.cwd(), argv.infile)); // eslint-disable-line
+
+    const file = await import(path.join(process.cwd(), argv.infile));
     const jsonString = JSON.stringify(file);
-        
+
     input.push(jsonString);
     input.push(null);
 } else {

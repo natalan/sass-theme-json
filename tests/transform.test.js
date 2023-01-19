@@ -1,7 +1,7 @@
-const mock = require("mock-fs");
-const fs = require("fs");
+import mock from "mock-fs";
+import fs from "fs";
 
-const transform = require("../lib/transform");
+import { jsonSass } from "../lib/transform";
 
 describe("json to sass", () => {
     beforeEach(() => {
@@ -22,7 +22,7 @@ describe("json to sass", () => {
     test("should transform json to sass", (done) => {
         let result = "";
         fs.createReadStream("test/theme.json")
-            .pipe(transform({
+            .pipe(jsonSass({
                 prefix: "$colors: "
             }))
             .on("data", (buf) => {

@@ -6,7 +6,9 @@ module.exports = {
         node: true,
         jest: true
     },
+    "parserOptions": { "ecmaVersion": 2022 },
     rules: {
+        "import/extensions": 0,
         "no-trailing-spaces": ["error", {
             skipBlankLines: true
         }],
@@ -57,6 +59,7 @@ module.exports = {
         "object-curly-newline": ["error", {
             ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
             ObjectPattern: { minProperties: 5, multiline: true, consistent: true }
-        }]
+        }],
+        "import/prefer-default-export": 0
     }
 };
