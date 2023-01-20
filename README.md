@@ -17,7 +17,7 @@ npm install sass-theme-json --save
 Usage
 -----
 ```bash
-sass-theme-json -i colors.json -o sass/colors.scss -p '$colors: ' 
+sass-theme-json -i colors.json -o colors.scss -p '$colors: ' 
 ```
 
 License
