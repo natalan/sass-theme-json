@@ -1,1 +1,3 @@
-module.exports = require("./lib/transform.js");
+import { jsonSass } from "./lib/transform.js";
+
+export default jsonSass;
