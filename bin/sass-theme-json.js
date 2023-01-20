@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { promises, createReadStream, createWriteStream, readFileSync } from "fs";
+import { promises, createReadStream, createWriteStream } from "fs";
 import path from "path";
 import minimist from "minimist";
 import { Readable } from "stream";
